@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thẻ Tín Dụng MSB Mastercard mDigi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --msb-orange: #F25422;
+            --msb-white: #FFFFFF;
+            --msb-black: #000000;
+            --msb-gray: #4A4A4A;
+            --msb-dark-blue: #003087;
+        }
+        body {
+            background-color: var(--msb-white);
+            color: var(--msb-black);
+        }
+        .hero-bg {
+            background: linear-gradient(to right, var(--msb-orange), #FFC107);
+            position: relative;
+            overflow: hidden;
+        }
+        /* Animated Background Particles */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.3)"/></svg>') repeat;
+            animation: float 20s linear infinite;
+            opacity: 0.5;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, -100px); }
+        }
+        .card-preview {
+            border-radius: 15px;
+            width: 160px;
+            height: 250px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .card-preview img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--msb-orange);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .benefit-card, .feature-card {
+            transition: transform 0.3s ease;
+            background-color: var(--msb-white);
+            border: 1px solid var(--msb-orange);
+        }
+        .benefit-card:hover, .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: var(--msb-white);
+            border-bottom: 2px solid var(--msb-orange);
+        }
+        nav a:hover {
+            color: var(--msb-orange);
+        }
+        footer {
+            background-color: var(--msb-orange);
+        }
+        .btn-primary {
+            background-color: var(--msb-orange);
+            color: var(--msb-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #E65C1A;
+        }
+        /* Custom orange bullet points */
+        .custom-bullets {
+            list-style: none;
+            padding-left: 1.5rem;
+        }
+        .custom-bullets li {
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+        .custom-bullets li::before {
+            content: '●';
+            position: absolute;
+            left: -1.5rem;
+            color: var(--msb-orange);
+            font-size: 1rem;
+        }
+        /* Numbered steps styling */
+        .step-circle {
+            background-color: var(--msb-orange);
+            color: var(--msb-white);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="shadow sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="LogoMSB.png" alt="MSB Logo" class="h-12">
+            </div>
+            <ul class="flex space-x-6">
+                <li><a href="#benefits" class="text-var(--msb-gray) hover:text-var(--msb-orange)">Lợi ích</a></li>
+                <li><a href="#features" class="text-var(--msb-gray) hover:text-var(--msb-orange)">Đặc điểm</a></li>
+                <li><a href="#requirements" class="text-var(--msb-gray) hover:text-var(--msb-orange)">Điều kiện</a></li>
+                <li><a href="#process" class="text-var(--msb-gray) hover:text-var(--msb-orange)">Quy trình</a></li>
+                <li><a href="#contact" class="text-var(--msb-gray) hover:text-var(--msb-orange)">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Thẻ Tín Dụng MSB Mastercard mDigi</h1>
+                <p class="text-lg mb-6">Sản phẩm dành cho Gen Y & Z – Năng động, số hóa, cá nhân hóa tài chính!</p>
+                <a href="https://msb.com.vn" target="_blank" class="btn-primary">Đăng ký ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Lợi ích của Thẻ MSB Mastercard mDigi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="benefit-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Hoàn tiền lên đến 20%</h3>
+                    <p class="text-var(--msb-gray)">Cho chi tiêu theo lĩnh vực tùy chọn: ăn uống, du lịch, khách sạn, giải trí số</p>
+                </div>
+                <div class="benefit-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Miễn lãi 45 ngày</h3>
+                    <p class="text-var(--msb-gray)">Quản lý dòng tiền hiệu quả với thời gian miễn lãi lên đến 45 ngày sau chi tiêu</p>
+                </div>
+				<div class="benefit-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Hoàn thêm 500 nghìn/kỳ</h3>
+                    <p class="text-var(--msb-gray)">Trong 3 kỳ sao kê đầu nếu giao dịch chi tiêu trong kỳ đạt tối thiểu 10 triệu đồng</p>
+                </div>
+                <div class="benefit-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Trả góp 0% lãi suất</h3>
+                    <p class="text-var(--msb-gray)">Linh hoạt đến 24 tháng tại Shopee, Tiki, FPT Shop, Nguyễn Kim,…</p>
+                </div>
+                <div class="benefit-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Thanh toán không tiếp xúc</h3>
+                    <p class="text-var(--msb-gray)">Tích hợp Apple Pay, Samsung Pay và công nghệ contactless</p>
+                </div>
+                <div class="benefit-card p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Quản lý số hóa</h3>
+                    <p class="text-var(--msb-gray)">Mở thẻ, khóa/mở, kiểm tra ưu đãi qua ứng dụng MSB mBank/mPlus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Đặc điểm nổi bật</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="feature-card bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Dành cho Gen Y & Z</h3>
+                    <p class="text-var(--msb-gray)">Thẻ thiết kế cho người trẻ năng động, yêu thích trải nghiệm số hóa và cá nhân hóa.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Tùy chỉnh hoàn tiền</h3>
+                    <p class="text-var(--msb-gray)">Chọn lĩnh vực hoàn tiền hàng tháng: ăn uống, du lịch, giải trí.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Thẻ ảo cá nhân hóa</h3>
+                    <p class="text-var(--msb-gray)">5 màu sắc tùy chọn, tiện lợi cho chi tiêu online.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-2">Phí hợp lý</h3>
+                    <p class="text-var(--msb-gray)">Miễn phí phát hành, phí thường niên 399,000 ₫ (chưa VAT).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Điều kiện & Hồ sơ mở thẻ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-4">Điều kiện</h3>
+                    <ul class="custom-bullets text-var(--msb-gray)">
+                        <li>Công dân Việt Nam, tuổi từ 18–65.</li>
+                        <li>Thu nhập tối thiểu 5 triệu VNĐ/tháng qua chuyển khoản.</li>
+                        <li>Hộ khẩu hoặc tạm trú tại khu vực có MSB.</li>
+                        <li>Điểm tín dụng CIC tốt, không nợ xấu.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-4">Hồ sơ</h3>
+                    <ul class="custom-bullets text-var(--msb-gray)">
+                        <li>Đơn đăng ký thẻ MSB.</li>
+                        <li>Bản sao CMND/CCCD/hộ chiếu.</li>
+                        <li>Bản sao hộ khẩu/tạm trú (hoặc hóa đơn tùy trú).</li>
+                        <li>Sao kê lương 3 tháng gần nhất hoặc giấy tờ chứng minh thu nhập.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Quy trình đăng ký</h2>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <span class="step-circle">1</span>
+                    <p class="text-var(--msb-gray)">Đăng ký trực tuyến tại <a href="https://onlinecard.msb.com.vn" class="text-var(--msb-orange) hover:underline">onlinecard.msb.com.vn</a> (mất khoảng 5 phút).</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="step-circle">2</span>
+                    <p class="text-var(--msb-gray)">Chọn loại thẻ (mDigi), màu sắc thẻ ảo, hạn mức tín dụng, và gửi hồ sơ.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="step-circle">3</span>
+                    <p class="text-var(--msb-gray)">MSB thẩm định hồ sơ: xác minh eKYC, tài liệu cá nhân và tài chính.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="step-circle">4</span>
+                    <p class="text-var(--msb-gray)">Nhận thông báo kết quả, đến chi nhánh nhận thẻ vật lý miễn phí.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="step-circle">5</span>
+                    <p class="text-var(--msb-gray)">Kích hoạt & sử dụng thẻ qua ứng dụng MSB mBank/MSB Plus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Thông tin liên hệ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-4">Liên hệ trực tiếp</h3>
+                    <p class="text-var(--msb-gray)">Hotline CSKH cá nhân: <a href="tel:19006083" class="text-var(--msb-orange) hover:underline">1900 6083</a></p>
+                    <p class="text-var(--msb-gray)">Hotline CSKH doanh nghiệp: <a href="tel:18006260" class="text-var(--msb-orange) hover:underline">1800 6260</a></p>
+                    <p class="text-var(--msb-gray)">Email: <a href="mailto:CSKHCaNhan@msb.com.vn" class="text-var(--msb-orange) hover:underline">CSKHCaNhan@msb.com.vn</a> (cá nhân)</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-var(--msb-orange) mb-4">Kênh số hóa</h3>
+                    <p class="text-var(--msb-gray)">Tải ứng dụng MSB mBank: <a href="https://www.msb.com.vn/vi/mbank" class="text-var(--msb-orange) hover:underline">iOS</a> | <a href="https://www.msb.com.vn/vi/mbank" class="text-var(--msb-orange) hover:underline">Android</a></p>
+                    <p class="text-var(--msb-gray)">Website: <a href="https://www.msb.com.vn" class="text-var(--msb-orange) hover:underline">www.msb.com.vn</a></p>
+                    <p class="text-var(--msb-gray)">Mạng lưới: 263 chi nhánh & ATM trên 51 tỉnh/thành</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Ngân hàng TMCP Hàng Hải Việt Nam (MSB). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+	</body>
+</html>
