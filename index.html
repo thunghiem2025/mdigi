@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thẻ Tín Dụng MSB Mastercard mDigi</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <style>
         :root {
             --msb-orange: #F25422;
@@ -19,6 +17,7 @@
             background-color: var(--msb-white);
             color: var(--msb-black);
         }
+		.container{max-width:var(--max-width);margin:auto;padding:0 1rem}
         .hero-bg {
             background: linear-gradient(to right, var(--msb-orange), #FFC107);
             position: relative;
@@ -126,7 +125,8 @@
 <body class="font-sans">
     <!-- Header -->
     <header class="shadow sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container">
+		<nav>
             <div class="flex items-center">
                 <img src="LogoMSB.png" alt="MSB Logo" class="h-12">
             </div>
@@ -138,6 +138,7 @@
 			  <li><a href="#contact">Liên hệ</a></li>
 			</ul>
         </nav>
+		</div>
     </header>
 
     <!-- Hero Section -->
